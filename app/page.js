@@ -7,7 +7,7 @@ import { Toaster } from "react-hot-toast";
 export const revalidate = 0; // important for real-time
 
 async function getLinks() {
-  const res = await fetch("http://localhost:3000/api/links", {
+  const res = await fetch(`${process.env.BASE_URL}/api/links`, {
     cache: "no-store",
   });
   return res.json();
